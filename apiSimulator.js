@@ -7,14 +7,14 @@
 
 const getProductDetails = (product) => {
   return new Promise((resolve) => {
-    setTimeout(() => resolve({ name: "Apple", price: 50 }), 1000);
+    setTimeout(() => resolve({ name: "Apple", price: 50 }), 1000); // 1000 = 1 sec
   });
 };
 
 // getProductReviews should simulate fetching reviews for a product.
 const getProductReviews = (reviews) => {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(["Review1", "Review2", "Review3"]), 1000);
+    setTimeout(() => resolve(["Fresh", "Delicious", "Slightly bruised!"]), 1000);
   });
 };
 
@@ -28,8 +28,7 @@ const getRelatedProducts = (products) => {
           { name: "Pear", price: 20 },
           { name: "Grape", price: 30 },
         ]),
-      1000,
-    );
+    1000);
   });
 };
 
