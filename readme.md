@@ -4,11 +4,12 @@ rather than just at the end of the promise chain?
     It addresses every possible step that may have a problem. Like, 
     in my apiSimulator code, the first step of retrieving a product is
     the product information, and then the review, and then similiar items. 
-    When I run my code, and there is a problem with the product information, 
-    it would tell me then. Not unlike if I had it at the end, if I just received
-    "Error" I'd have to figure out where the error happened, and I could spend
-    a long time trying to figure it out. But because my error happened at
-    retrieving product information I know to just go there, instead of, say,
+    When I run my code, (if I had completed it correctly) and there was a problem 
+    with the product information, it would tell me then. Not unlike if I had 
+    it at the end (which I do), if I just received "Error" I'd have to figure out where
+    the error happened, and I could spend a long time trying to figure it out. 
+    But because my error happened at retrieving product information 
+    I know to just go there, instead of, say,
     spending forever on related items.
 
 
