@@ -5,7 +5,7 @@
 
 // getProductDetails should simulate fetching product details (e.g., name, price).
 
-const getProductDetails = () => {
+const getProductDetails = (product) => {
   return new Promise((resolve) => {
     setTimeout(() => resolve({ name: "Apple", price: 50 }), 1000);
   });
@@ -43,7 +43,7 @@ async function handleData() {
 
     const relatedProducts = await getRelatedProducts(reviews);
     console.log("Fetched related products:", relatedProducts);
-  } catch (error) {
+  } catch (error) { //would I want an error for each variable?
     console.error("Error fetching data:", error);
   }
 }
