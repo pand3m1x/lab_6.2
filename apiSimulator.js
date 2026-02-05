@@ -3,25 +3,27 @@
 // Resolve the Promise with an array of mock products after a 1-second delay.
 // Use Math.random() to sometimes reject the Promise with an error message, e.g., "Failed to fetch product catalog".
 
+// I am realizing I really messed up and may have confused some things
+
 // getProductDetails should simulate fetching product details (e.g., name, price).
 
-const getProductDetails = (product) => {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve({ name: "Apple", price: 50 }), 1000); // 1000 = 1 sec
+export const getProductDetails = (product) => {
+  return new Promise((resolve) => { 
+    setTimeout(() => resolve({ name: "Apple", price: 50 }), 1000); // 1000 = 1 sec //needs MathRandom
   });
 };
 
 // getProductReviews should simulate fetching reviews for a product.
-const getProductReviews = (reviews) => {
+export const getProductReviews = (reviews) => {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(["Fresh", "Delicious", "Slightly bruised!"]), 1000);
+    setTimeout(() => resolve(["Fresh", "Delicious", "Slightly bruised!"]), 1000); //needs MathRandom
   });
 };
 
 // getRelatedProducts should simulate fetching related products.
-const getRelatedProducts = (products) => {
+export const getRelatedProducts = (products) => {
   return new Promise((resolve) => {
-    setTimeout(
+    setTimeout( //needs MathRandom
       () =>
         resolve([
           { name: "Orange", price: 10 },
@@ -32,7 +34,7 @@ const getRelatedProducts = (products) => {
   });
 };
 
-async function handleData() {
+async function handleData() { //Is async okay, or should it be promise chains...
   try {
     const product = await getProductDetails();
     console.log("Fetched product:", product);
@@ -66,3 +68,6 @@ getProductDetails()
   .catch((e) => {
     console.error(e);
   });
+
+  // need network error
+  // need data error
